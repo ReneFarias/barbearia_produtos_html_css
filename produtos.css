@@ -118,6 +118,7 @@ footer {
     background: url("https://raw.githubusercontent.com/ReneFarias/barbearia_produtos_html_css/main/img/bg.jpg");
     /* para darmos espaço entre cima e baixo */
     padding: 40px 0;
+    background: #CCCCCC;
 }
 .copyright {
     color: #FFFFFF;
