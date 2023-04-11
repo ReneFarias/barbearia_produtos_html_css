@@ -1,0 +1,126 @@
+header {
+    background: #BBBBBB;
+    /* para ter uma margen  de 20px entre cima e baixo do cabeçalho */
+    padding: 20px;
+}
+.caixa {
+    /* position relative para levantar e pegar na caixa e o menu vim para dentro da caixa, pois o menu está como absolute e está no ponto em relação a página */
+    position: relative;
+    width: 940px;
+/* para centralizarmos automaticamente a caixa independente da tela usamos margin para definir o inicio em 0 e auto para aplicar a diferença entre os lado automaticamente */
+    margin: 0 auto;
+}
+
+/* itens da lista dentro da tag nav */
+
+nav {
+    /* absolute inicia de um ponto fora de onde iniciou,e para colocarmos dentro de uma div nesse caso div caixa precisamos colocar position relativa na tag que vira, pois o menu está como absolute e está no ponto em relação a página*/
+    position: absolute;
+    /* para começar do topo 0, mas 110px para esta onde queremos */
+    top: 110px;
+    /* para começar do lado direito*/
+    right: 0;
+
+    
+    /* usado para pegar elemento de do ponto de origem e demais alterações vai seguir aquele ponto 
+    position: relative;
+     --como falado anteriormente, ele anda do ponto de origem no topo para baixo
+    top: 20px;
+     --aqui vemos o elemento andar para a esquerda partindo do ponto que declaramos no codigo position:relative 
+    left: 300px; */
+}
+nav li {
+    display: inline;
+    /* margin é o espaçamento externo e quero a esquerda, sequencia é primeiro pro topo, direita, baixo, esquerda */
+    margin: 0 0 0 15px;
+}
+nav a {
+    /* text-transform = transformar-texto: em maiusculo */
+    text-transform: uppercase;
+    color: #000000;
+    /* peso-fonte: negrito */
+    font-weight: bold;
+    font-size: 22px;
+    /* decoração-texto: nenhuma */
+    text-decoration: none;
+    /* o ponto absoluto de outro elemento, para mudar a posição do ponto inicial que ele se encontra */
+/* pegamos a tag nav e os links como a, e o :hover que é quando passar o mouse por cima, detro dos {} tem mudar de cor, e deixar texto decorado com sublinhado */
+}
+nav a:hover {
+        color: #C78C19;
+        text-decoration: underline;
+ }
+
+
+
+.produtos {
+    width: 940px;
+    /* 0 para cima e para baixo, e auto para os lados */
+    margin: 0 auto;
+    /* espaçamento interno 50 pixels para cima e baixo, e 0 para os lados */
+    padding: 50px 0;
+}
+/* pegamos cada item e determinamos seu tamanho e detalhes*/
+.produtos li {
+    /* itens um do lado do outro, por que eles ocupa o tamanho do centeúdo deles e 100% da largura; Inline-block pois com o tamanho do seu conteúdo, mas regulável. Pois o seu tamanho pode ser ajustado, tanto na largura, quanto na altura.*/
+    display: inline-block;
+    text-align: center;
+    /* para deixarmos do mesmo tamanho cada item */
+    width: 30%;
+/* para resolver o problema pelo fato de estar alinhando com a linha de baixo usando o inline-block, sendo assim eles alinha com a linha de cima */
+    vertical-align: top;
+    /*background: #CCCCCC;*/
+    /* para dar distancia externamente, cima e baixo 0, e aos lados 1.5 + 1.5 lembrando que estamos usando % para essas margens */
+    margin: 0 1.5%;
+    /* espaçamento interno 30px cima e baixo + 20px para os lados, ***!! ATENÇÃO O elemento aumenta o seu tamanho. Quando declaro que existe um espaçamento interno, estou aumentando o conteúdo. */
+    padding: 30px 20px;
+    /* para definir o width de cada item novamente convertendo os px e % ajustando a posição, para não ficar passando */
+    box-sizing: border-box;
+    /* bordas-arredondadas: 10 pixels, só um funciona em todas, se colocar 4 valores ai pega os 4 cantos */
+    border-radius: 10px;
+
+    /* cor da borda 
+    border-color: #000000;
+     largura da borda 
+    border-width: 2px;
+     estilo da borda
+     essa borda é a mesma coisa da de cima, tamanho 2px, solido, cor preta. Podemos colocar borda em qualquer conteúdo, como exp: caixa do conteúdo, caixa do espaçamento interno, a caixa da borda, e a caixa do espaçamento externo */     
+    border: 2px solid #000000;
+}
+/* produtos itens: quando o mouse estiver por cima; troca a cor */
+.produtos li:hover{
+    border-color: #C78C19;
+} 
+/* produtos itens: quando estiver ativo mudar de cor para verde */
+.produtos li:active{
+    border-color: #08BC19;
+} 
+/* produtos itens: quando mouse por cima o elemento h2{ tamanho-fonte: aumenta para 34px */
+.produtos li:hover h2{
+   font-size: 34px;
+} 
+/* para alterar tag especificas que estão dentro de classe, chama clase depois as tags pela sua hierarquia */
+.produtos h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+.produto-descricao {
+    font-size: 18px;
+}
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+footer {
+    text-align: center;
+    /* para colocar imagem de fundo exportada usamos url("caminho"), importante lembrar que a imagem replica até preencher a área */
+    background: url("bg.jpg");
+    /* para darmos espaço entre cima e baixo */
+    padding: 40px 0;
+}
+.copyright {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 20px 0 0;
+}
